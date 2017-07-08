@@ -1,0 +1,3 @@
+#igonore the following folder form git-tracking
+.idea/
+node_modules/

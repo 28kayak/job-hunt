@@ -1,0 +1,16 @@
+{
+  "name": "job_hunting",
+  "version": "1.0.0",
+  "description": "kaya's jobhunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Kaya Ota",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "0.0.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.11.1"
+  }
+}
