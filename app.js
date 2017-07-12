@@ -10,11 +10,29 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 
+
+console.log("--------- bring user-defined modules --------------");
 //bring the data model
 require('./api/models/database');
+//bring the passport config after model is defined
 require('./api/config/passport');
-
+console.log("-------- bring router ------------------------------");
 var routesApi = require('./api/routes/index');
 var app = express();
+console.log("------ initialize passport -------------------------");
 app.use(passport.initialize());
-app.use('/api', routesApi);
+app.use('/api', routesApi)
+
+
+//application
+console.log("============= application =======================");
+app.get('*', function (req,res) {
+    console.log(__dirname + "/view/index.html");
+    res.sendFile(__dirname + "/view/index.html");
+})
+
+
+
+app.listen('3000', function (req,res){
+    console.log("==================== application is running at 3000 ======================");
+})

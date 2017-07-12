@@ -1,3 +1,4 @@
 #igonore the following folder form git-tracking
 .idea/
 node_modules/
+api/models/database_config_info.txt

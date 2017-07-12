@@ -58,4 +58,6 @@ userSchema.methods.generateJWT = function () {
         exp: parseInt(expiry.getTime()/1000) }, secret );
 };//generateJWT
 
+
+//export User Schema as mongoose.model named User
 mongoose.model('User', userSchema);
